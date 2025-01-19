@@ -88,17 +88,16 @@
             color: #333;
         }
 
-        .image-container {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
+        #comments {
+            margin-top: 20px;
         }
 
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 0 10px;
+        .comment {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
     </style>
 </head>
@@ -131,8 +130,41 @@
         </ul>
     </div>
     <section>
+        <h2>تحليل العلوم الروحانية</h2>
+        <p>يتم تحليل العلوم الروحانية من خلال النصوص المقدسة والتعاليم الروحية. يمكن الاطلاع على الروابط التالية:</p>
+        <ul>
+            <li><a href="https://www.islamicbook.ws/amma/tfsir-alahlam-abn-sirin.html">تفسير الأحلام</a> - دراسة الأحلام وتأويلها.</li>
+            <li><a href="https://www.quran.com/">القرآن الكريم</a> - المصدر الرئيسي للعلوم الروحانية.</li>
+            <li><a href="https://www.hadith.com/">الحديث النبوي</a> - تعاليم النبي محمد (صلى الله عليه و سلم وآله ) في الروحانية.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>تحليل العلوم الطبيعية</h2>
+        <p>تتعلق العلوم الطبيعية بدراسة الظواهر الطبيعية وقوانينها. يمكن الاطلاع على الروابط التالية:</p>
+        <ul>
+            <li><a href="https://www.nature.com/">مجلة Nature</a> - أبحاث ودراسات في العلوم الطبيعية.</li>
+            <li><a href="https://www.sciencedirect.com/">ScienceDirect</a> - مقالات علمية في مختلف فروع العلوم.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>تحليل العلوم الاجتماعية</h2>
+        <p>تتناول العلوم الاجتماعية دراسة سلوك الأفراد والمجتمعات. يمكن الاطلاع على الروابط التالية:</p>
+        <ul>
+            <li><a href="https://www.jstor.org/">JSTOR</a> - مقالات أكاديمية في العلوم الاجتماعية.</li>
+            <li><a href="https://www.sociologicalreview.com/">Sociological Review</a> - أبحاث في علم الاجتماع.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>تحليل العلوم الإنسانية</h2>
+        <p>تتناول العلوم الإنسانية دراسة الثقافة والفنون. يمكن الاطلاع على الروابط التالية:</p>
+        <ul>
+            <li><a href="https://www.humanities.org/">Humanities</a> - مقالات في العلوم الإنسانية.</li>
+            <li><a href="https://www.jstor.org/">JSTOR</a> - مقالات أكاديمية في العلوم الإنسانية.</li>
+        </ul>
+    </section>
+    <section>
         <h2>نموذج التعليق</h2>
-        <form>
+        <form id="commentForm">
             <div class="form-group">
                 <label for="name">اسمك:</label>
                 <input type="text" id="name" name="name" class="form-control" required>
@@ -143,6 +175,10 @@
             </div>
             <button type="submit" class="btn btn-primary">إرسال</button>
         </form>
+    </section>
+    <section>
+        <h2>التعليقات</h2>
+        <div id="comments"></div>
     </section>
     <section>
         <h2>دورات في الذكاءالاصطناعي Google  و Microsoft </h2>
@@ -205,8 +241,6 @@
         </form>
     </section>
     <section>
-    
-    <section>
         <h2>تواصل معنا</h2>
         <p>للتواصل عبر الواتساب: <a href="https://wa.me/966557214009">واتساب</a></p>
         <p>البريد الإلكتروني: <a href="mailto:thegreatteachersam@gmail.com">thegreatteachersam@gmail.com</a></p>
@@ -215,7 +249,18 @@
     <section>
         <h2>آخر الفيديوهات</h2>
         <div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DDrQZH8Mwxs?si=XNiaZXyz4HnuCbfe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DDrQZH8Mwxs?si=XNiaZXyz4HnuCbfe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section>
+        <h2>قاعدة البيانات للعلوم</h2>
+        <p>تم إعداد قاعدة بيانات لكل نوع من العلوم، حيث يمكن البحث عن المعلومات المتعلقة بكل علم. الروابط أدناه توضح كيفية الربط:</p>
+        <ul>
+            <li><strong>العلوم الروحانية:</strong> قاعدة البيانات تحتوي على نصوص تفسير الأحلام، القرآن الكريم، والحديث النبوي.</li>
+            <li><strong>العلوم الطبيعية:</strong> قاعدة البيانات تحتوي على أبحاث ودراسات في العلوم الطبيعية.</li>
+            <li><strong>العلوم الاجتماعية:</strong> قاعدة البيانات تحتوي على مقالات أكاديمية في العلوم الاجتماعية.</li>
+            <li><strong>العلوم الإنسانية:</strong> قاعدة البيانات تحتوي على مقالات في العلوم الإنسانية.</li>
+        </ul>
     </section>
 </div>
 <footer>
@@ -224,5 +269,18 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('commentForm').onsubmit = function(event) {
+        event.preventDefault(); // منع الإرسال الافتراضي للنموذج
+        var name = document.getElementById('name').value;
+        var comment = document.getElementById('comment').value;
+        var commentsDiv = document.getElementById('comments');
+        var newComment = document.createElement('div');
+        newComment.classList.add('comment');
+        newComment.innerHTML = '<strong>' + name + ':</strong> <p>' + comment + '</p>';
+        commentsDiv.appendChild(newComment);
+        document.getElementById('commentForm').reset(); // إعادة تعيين النموذج
+    };
+</script>
 </body>
 </html>

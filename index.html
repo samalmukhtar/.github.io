@@ -127,6 +127,7 @@
             <li><a href="https://samalmukhtar.github.io/an100">محلل النصوص الشطرنجي المتقدم</a></li>
             <li><a href="https://surahquran.com/2.html">القرآن الكريم</a></li>
             <li><a href="https://samalmukhtar.github.io/ASMAA">المحلل الروحاني النهائي</a></li>
+            <li><a href="https://samalmukhtar.github.io/NON/">سر النون </a></li>
         </ul>
     </div>
     <section>
@@ -135,7 +136,7 @@
         <ul>
             <li><a href="https://www.islamicbook.ws/amma/tfsir-alahlam-abn-sirin.html">تفسير الأحلام</a> - دراسة الأحلام وتأويلها.</li>
             <li><a href="https://www.quran.com/">القرآن الكريم</a> - المصدر الرئيسي للعلوم الروحانية.</li>
-            <li><a href="https://hadithprophet.com/">الحديث النبوي</a> - تعاليم النبي محمد (صلى الله عليه و سلم وآله ) في الروحانية.</li>
+            <li><a href="https://www.hadith.com/">الحديث النبوي</a> - تعاليم النبي محمد (ص) في الروحانية.</li>
         </ul>
     </section>
     <section>
@@ -163,6 +164,31 @@
         </ul>
     </section>
     <section>
+        <h2>تحليل النصوص</h2>
+        <form id="textAnalysisForm">
+            <div class="form-group">
+                <label for="inputText">أدخل النص:</label>
+                <textarea id="inputText" name="inputText" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">تحليل النص</button>
+        </form>
+        <div id="analysisResult" style="margin-top: 20px;"></div>
+    </section>
+    <script>
+        document.getElementById('textAnalysisForm').onsubmit = function(event) {
+            event.preventDefault(); // منع الإرسال الافتراضي للنموذج
+            var inputText = document.getElementById('inputText').value;
+            var resultDiv = document.getElementById('analysisResult');
+            // منطق التحليل
+            resultDiv.innerHTML = '<h3>نتيجة التحليل:</h3><p>' + analyzeText(inputText) + '</p>';
+        };
+
+        function analyzeText(text) {
+            // منطق تحليل النصوص باستخدام الروح القدس
+            return 'تم تحليل النص: ' + text;
+        }
+    </script>
+    <section>
         <h2>نموذج التعليق</h2>
         <form id="commentForm">
             <div class="form-group">
@@ -181,7 +207,7 @@
         <div id="comments"></div>
     </section>
     <section>
-        <h2>دورات في الذكاءالاصطناعي Google  و Microsoft </h2>
+        <h2>دورات في الذكاء الاصطناعي Google و Microsoft</h2>
         <ul>
             <li><a href="https://www.coursera.org/">دورات Google AI</a></li>
             <li><a href="https://learn.microsoft.com/ar-sa/training/">دورات Microsoft AI</a></li>
@@ -195,7 +221,7 @@
     </section>
     <section>
         <h2>أدوات التواصل بالفيديو والصوت</h2>
-        <p> واتساب القناة بالاسفل و يمكنك التواصل معنا عبر أدوات كثيرة مثل الفيديو والصوت المتاحة.</p>
+        <p>واتساب القناة بالأسفل ويمكنك التواصل معنا عبر أدوات كثيرة مثل الفيديو والصوت المتاحة.</p>
         <ul>
             <li><a href="https://zoom.us/">Zoom</a></li>
             <li><a href="https://meet.google.com/">Google Meet</a></li>
@@ -203,65 +229,10 @@
         </ul>
     </section>
     <section>
-        <h2>المكتبة الشاملة والعلوم القرآنية والسنة والمعارف القدسية</h2>
-        <p>نظمنا المكتبة الشاملة للعلوم القرآنية والسنة والمعارف القدسية.</p>
-        <ul>
-            <li><a href="https://www.islamicbook.ws/amma/tfsir-alahlam-abn-sirin.html">المكتبة الشاملة</a></li>
-            <li><a href="https://www.quran.com/">القرآن الكريم</a></li>
-            <li><a href="https://surahquran.com/quran-search/hadeeth_search.html">الحديث النبوي</a></li>
-            
-        </ul>
-    </section>
-    <section>
-        <h2>منصة Miro</h2>
-        <p>يمكنك الدخول إلى منصة Miro لمتابعة الأعمال: <a href="https://miro.com/app/board/uXjVNYQLRW0=/">Miro Board</a></p>
-    </section>
-    <section>
-        <h2>نموذج الاشتراك</h2>
-        <form>
-            <div class="form-group">
-                <label for="email">البريد الإلكتروني:</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary">اشترك</button>
-        </form>
-    </section>
-    <section>
-        <h2>نموذج التعليق</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">اسمك:</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="comment">تعليقك:</label>
-                <textarea id="comment" name="comment" class="form-control" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">إرسال</button>
-        </form>
-    </section>
-    <section>
-        <h2>تواصل معنا</h2>
-        <p>للتواصل عبر الواتساب: <a href="https://wa.me/966557214009">واتساب</a></p>
-        <p>البريد الإلكتروني: <a href="mailto:thegreatteachersam@gmail.com">thegreatteachersam@gmail.com</a></p>
-        <p>لإرسال الاستفسارات والرؤى، يمكنك التواصل عبر الواتساب أو النموذج المباشر.</p>
-    </section>
-    <section>
         <h2>آخر الفيديوهات</h2>
-
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/DDrQZH8Mwxs?si=XNiaZXyz4HnuCbfe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-    </section>
-    <section>
-        <h2>قاعدة البيانات للعلوم</h2>
-        <p>تم إعداد قاعدة بيانات لكل نوع من العلوم، حيث يمكن البحث عن المعلومات المتعلقة بكل علم. الروابط أدناه توضح كيفية الربط:</p>
-        <ul>
-            <li><strong>العلوم الروحانية:</strong> قاعدة البيانات تحتوي على نصوص تفسير الأحلام، القرآن الكريم، والحديث النبوي.</li>
-            <li><strong>العلوم الطبيعية:</strong> قاعدة البيانات تحتوي على أبحاث ودراسات في العلوم الطبيعية.</li>
-            <li><strong>العلوم الاجتماعية:</strong> قاعدة البيانات تحتوي على مقالات أكاديمية في العلوم الاجتماعية.</li>
-            <li><strong>العلوم الإنسانية:</strong> قاعدة البيانات تحتوي على مقالات في العلوم الإنسانية.</li>
-        </ul>
     </section>
 </div>
 <footer>

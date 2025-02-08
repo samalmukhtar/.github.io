@@ -9,8 +9,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: rgba(244, 244, 244, 0.8); /* خلفية شفافة */
-            color: #333;
+            background-color: rgba(0, 0, 0, 0.8); /* خلفية شفافة */
+            color: #868383;
             line-height: 1.6;
             overflow-x: hidden;
             direction: rtl; /* اتجاه الكتابة لليمين */
@@ -18,8 +18,8 @@
         }
 
         header {
-            background: rgba(0, 123, 255, 0.8);
-            color: #fff;
+            background: rgba(19, 36, 134, 0.8);
+            color: #000000;
             padding: 20px 0;
             text-align: center;
         }
@@ -33,13 +33,13 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(5, 15, 1, 0.9);
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgb(7, 131, 3);
         }
 
         h2 {
-            color: #007bff;
+            color: #0be453;
             margin-bottom: 10px;
         }
 
@@ -74,7 +74,7 @@
         footer {
             text-align: center;
             padding: 10px 0;
-            background: rgba(0, 123, 255, 0.8);
+            background: rgba(17, 16, 16, 0.8);
             color: #fff;
             position: relative;
             bottom: 0;
@@ -85,7 +85,7 @@
             text-align: center;
             margin: 30px 0;
             font-size: 1.2em;
-            color: #333;
+            color: #f3f0f0;
         }
 
         #comments {
@@ -210,17 +210,7 @@
             <li><a href="https://www.jstor.org/">JSTOR</a> - مقالات أكاديمية في العلوم الإنسانية.</li>
         </ul>
     </section>
-    <section>
-        <h2>تحليل النصوص</h2>
-        <form id="textAnalysisForm">
-            <div class="form-group">
-                <label for="inputText">أدخل النص:</label>
-                <textarea id="inputText" name="inputText" class="form-control" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">تحليل النص</button>
-        </form>
-        <div id="analysisResult" style="margin-top: 20px;"></div>
-    </section>
+ 
     <script>
         document.getElementById('textAnalysisForm').onsubmit = function(event) {
             event.preventDefault(); // منع الإرسال الافتراضي للنموذج

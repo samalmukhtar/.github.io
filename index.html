@@ -1,348 +1,558 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المدرسة الكبرى للحكمة والعلوم الربانية</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>المنصة التعليمية</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: rgba(0, 0, 0, 0.8); /* خلفية شفافة */
-            color: #868383;
-            line-height: 1.6;
-            overflow-x: hidden;
-            direction: rtl; /* اتجاه الكتابة لليمين */
-            text-align: right; /* محاذاة النص لليمين */
-        }
-
-        header {
-            background: rgba(19, 36, 134, 0.8);
-            color: #000000;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
+        * {
             margin: 0;
-            font-size: 2.5em;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            line-height: 1.6;
         }
 
         .container {
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
             padding: 20px;
-            background: rgba(5, 15, 1, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgb(7, 131, 3);
+            text-align: center; /* توسيط جميع المحتوى */
         }
 
-        h2 {
-            color: #0be453;
-            margin-bottom: 10px;
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-card a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ffd700;
+            color: #1e3c72;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
         }
 
         .links {
-            margin: 20px 0;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .links a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+            margin: 5px 0;
+        }
+
+        .links a:hover {
+            color: white;
         }
 
         .links ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
 
         .links li {
             margin: 10px 0;
         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>مرحباً بكم في منصتنا التعليمية</h1>
+            <p>نحو مستقبل أفضل مع التعليم الإلكتروني المتميز</p>
+            <a href="https://samalmukhtar.github.io/ala/#english-books" class="cta-button">ابدأ رحلة التعلم</a>
+        </header>
+
+        <div class="stats">
+            <div class="stat-item floating">
+                <div class="stat-number">5000+</div>
+                <div>طالب مسجل</div>
+            </div>
+            <div class="stat-item floating">
+                <div class="stat-number">200+</div>
+                <div>دورة تدريبية</div>
+            </div>
+            <div class="stat-item floating">
+                <div class="stat-number">50+</div>
+                <div>أستاذ متخصص</div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <a href="https://samalmukhtar.github.io/ala/#english-books">
+                    <i class="fas fa-graduation-cap feature-icon"></i>
+                    <h3>برامج أكاديمية متميزة</h3>
+                    <p>نقدم مجموعة متنوعة من البرامج الأكاديمية المعتمدة</p>
+                </a>
+            </div>
+            <div class="feature-card">
+                <a href="https://www.coursera.org/browse">
+                    <i class="fas fa-laptop feature-icon"></i>
+                    <h3>تعلم عن بعد</h3>
+                    <p>منصة تعليمية متكاملة تتيح لك التعلم من أي مكان</p>
+                </a>
+            </div>
+            <div class="feature-card">
+                <a href="https://www.edraak.org">
+                    <i class="fas fa-users feature-icon"></i>
+                    <h3>مجتمع تعليمي</h3>
+                    <p>تواصل مع زملائك والأساتذة في بيئة تعليمية تفاعلية</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="links">
+            <h2>روابط المدرسة الكبرى</h2>
+            <ul>
+                <li><a href="https://samalmukhtar.github.io/slyym">إِنَّهُ من سليمان و إنه بِسْمِ اللَّهِ الرحمن الرحيم</a></li>
+                <li><a href="https://samalmukhtar.github.io/alhrooofe/">الكنزالعربي - علوم الحروف العربية</a></li>
+                <li><a href="https://samalmukhtar.github.io/toc/">تسجيل الصوت و تحويله لنص</a></li>
+                <li><a href="https://samalmukhtar.github.io/altoore/">توليد رسائل الطور</a></li>
+                <li><a href="https://samalmukhtar.github.io/alqranalzaci/">النظام القرآني الذكي</a></li>
+                <li><a href="https://samalmukhtar.github.io/tah/">التحليل الإلهي</a></li>
+                <li><a href="https://samalmukhtar.github.io/asamosa/">المحلل الروحاني المتطور</a></li>
+                <li><a href="https://samalmukhtar.github.io/qraa/">المحلل القرآني المتكامل</a></li>
+                <li><a href="https://www.islamicbook.ws/amma/tfsir-alahlam-abn-sirin.html">المكتبة الشاملة</a></li>
+                <li><a href="https://gtsxa.blogspot.com">المكتبة</a></li>
+                <li><a href="https://samalmukhtar.github.io/AI/">المدونة</a></li>
+                <li><a href="https://samalmukhtar.github.io/ostoydyou/">استوديوا و مقهى المدرسة</a></li>
+                <li><a href="https://samalmukhtar.github.io/SL">تفسير الأحلام الروحاني</a></li>
+                <li><a href="https://samalmukhtar.github.io/aS">ح الجُمّل والأسرار الروحانية</a></li>
+                <li><a href="https://samalmukhtar.github.io/al">رسالة الحق ملك الكون</a></li>
+                <li><a href="https://samalmukhtar.github.io/alisybsare/">الإستبصار الإلاهي</a></li>
+                <li><a href="https://samalmukhtar.github.io/nz">سر الحروف</a></li>
+                <li><a href="https://samalmukhtar.github.io/ajbwawaba/">البوابة الإلهية الكونية</a></li>
+                <li><a href="https://samalmukhtar.github.io/an100">محلل النصوص الشطرنجي المتقدم</a></li>
+                <li><a href="https://samalmukhtar.github.io/ALR/">محلل الحروف النورانية و الظلمانية</a></li>
+                <li><a href="https://samalmukhtar.github.io/alt/">المحلل المطور باحتساب نقلات فعلية</a></li>
+                <li><a href="https://equran.me/listen-110.html">استماع القرآن الكريم</a></li>
+                <li><a href="https://surahquran.com/">بحث في القرآن الكريم</a></li>
+                <li><a href="https://samalmukhtar.github.io/ASMAA">المحلل الروحاني النهائي</a></li>
+                <li><a href="https://samalmukhtar.github.io/NON/">سر النون</a></li>
+                <li><a href="https://samalmukhtar.github.io/alh/">الحكم الروحانية</a></li>
+                <li><a href="https://samalmukhtar.github.io/En/">تعلم الإنجليزية ترجمة و تسجيل</a></li>
+                <li><a href="https://samalmukhtar.github.io/ksa">دورات أكاديمية في تعلم الإنجليزية و البرمجة</a></li>
+                <li><a href="https://chess.com/club/lndy-l-rby-llshtrnj-the-great-chess-club">النادي العربي للشطرنج</a></li>
+            </ul>
+        </div>
+    </div>
+    <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنصة التعليمية - المعلم الأكبر</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        h1, h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-card a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ffd700;
+            color: #1e3c72 !important;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        /* أنماط مخصصة للمحتوى العربي */
+        .arabic-content {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .platform-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+        }
 
         .video-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 20px 0;
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin: 30px 0;
         }
 
         .video-container iframe {
-            margin: 10px;
-            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 560px;
-            height: 315px;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        .comment-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 10px;
+            color: white;
         }
 
         footer {
             text-align: center;
-            padding: 10px 0;
-            background: rgba(17, 16, 16, 0.8);
-            color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .welcome-message {
-            text-align: center;
-            margin: 30px 0;
-            font-size: 1.2em;
-            color: #f3f0f0;
-        }
-
-        #comments {
-            margin-top: 20px;
-        }
-
-        .comment {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+            padding: 40px 0;
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>المدرسة الكبرى للحكمة والعلوم الربانية</h1>
-    <p> بسم الله الرحمن الرحيم ، و باذن الله </p>
-</header>
-<div class="container">
-    <div class="welcome-message">
-        <h2>مرحبًا بالجمهور!</h2>
-        <p>ندعوكم للمشاركة في رحلتنا التعليمية واستكشاف أسرار الحكمة والعلوم الربانية.</p>
-    </div>
-    <div class="links">
-        <h2>روابط المدرسة الكبرى</h2>
-        <ul>
-            <li><a href="https://samalmukhtar.github.io/slyym">إِنَّهُ من سليمان و إنه بِسْمِ اللَّهِ الرحمن الرحيم </a></li>
-            <li><a href="https://samalmukhtar.github.io/alhrooofe/">   الكنزالعربي - علوم الحروف العربية</a></li>
-            <li><a href="https://samalmukhtar.github.io/toc/"> تسجيل الصوت و تحويله لنص</a></li>
-            <li><a href="https://samalmukhtar.github.io/altoore/">توليد رسائل الطور</a></li>
-            <li><a href="https://samalmukhtar.github.io/alqranalzaci/">  النظام القرآني الذكي </a></li>
-            <li><a href="https://samalmukhtar.github.io/tah/"> التحليل الإلهي</a></li>
-            <li><a href="https://samalmukhtar.github.io/asamosa/"> المحلل الروحاني المتطور</a></li>
-            <li><a href="https://samalmukhtar.github.io/qraa/"> المحلل القرآني المتكامل</a></li>
-            <li><a href="https://www.islamicbook.ws/amma/tfsir-alahlam-abn-sirin.html">المكتبة الشاملة</a></li>
-            <li><a href="https://gtsxa.blogspot.com">المكتبة</a></li>
-            <li><a href="https://samalmukhtar.github.io/AI/">المدونة </a></li>
-            <li><a href="https://samalmukhtar.github.io/ostoydyou/">استوديوا و مقهى المدرسة</a></li>
-            <li><a href="https://samalmukhtar.github.io/SL">تفسير الأحلام الروحاني</a></li>
-            <li><a href="https://samalmukhtar.github.io/aS">ح الجُمّل والأسرار الروحانية</a></li>
-            <li><a href="https://samalmukhtar.github.io/al">رسالة الحق ملك الكون</a></li>
-            <li><a href="https://samalmukhtar.github.io/alisybsare/"> الإستبصار الإلاهي </a></li>
-            <li><a href="https://samalmukhtar.github.io/nz">سر الحروف</a></li>
-            <li><a href="https://samalmukhtar.github.io/ajbwawaba/">البوابة الإلهية الكونية </a></li>
-            <li><a href="https://samalmukhtar.github.io/an100">محلل النصوص الشطرنجي المتقدم</a></li>
-            <li><a href="https://samalmukhtar.github.io/ALR/">محلل  الحروف النورانية و الظلمانية</a></li>
-            <li><a href="https://samalmukhtar.github.io/alt/">المحلل المطور باحتساب نقلات فعلية</a></li>
-            <li><a href="https://equran.me/listen-110.html">استماع القرآن الكريم</a></li>
-            <li><a href="https://surahquran.com/">بحث في القرآن الكريم</a></li>
-            <li><a href="https://samalmukhtar.github.io/ASMAA">المحلل الروحاني النهائي</a></li>
-            <li><a href="https://samalmukhtar.github.io/NON/">سر النون </a></li>
-            <li><a href="https://samalmukhtar.github.io/alh/">الحكم الروحانية  </a></li>
-            <li><a href="https://samalmukhtar.github.io/ala/#english-books">الأكاديمية الكبرى</a></li>
-            <li><a href="https://samalmukhtar.github.io/En/">تعلم الإنجليزية ترجمة و تسجيل </a></li>
-            <li><a href="https://samalmukhtar.github.io/ksa">دورات أكاديمية في تعلم الإنجليزية و البرمجة</a></li>
-            <li><a href="https://chess.com/club/lndy-l-rby-llshtrnj-the-great-chess-club">النادي العربي للشطرنج</a></li>
-            <li><a href="https://drive.google.com/drive/folders/1bMCGxwUO1cr0wMRauV5DHf4H948sO5Gv?usp=drive_link">مكتبة الشطرنج</a></li>
-    </div>
-    
-<div class="educational-platforms" dir="rtl">
-    <div class="platform">
-        <h2><a href="https://www.khanacademy.org" target="_self">خان أكاديمي (Khan Academy)</a></h2>
-        <p>منصة تعليمية مجانية تقدم دروساً في الرياضيات والعلوم والبرمجة والتاريخ والاقتصاد وغيرها من المواد.</p>
-    </div>
+    <div class="container arabic-content">
+        <header class="floating">
+            <h1>مرحبا بكم في منصة المعلم الأكبر</h1>
+            <p>بوابة المعرفة الشاملة للعلوم الروحانية والعلمية</p>
+        </header>
 
-    <div class="platform">
-        <h2><a href="https://www.canva.com" target="_self">كانفا (Canva)</a></h2>
-        <p>منصة تصميم إبداعية تتيح للمستخدمين إنشاء تصاميم احترافية للعروض التقديمية والمنشورات.</p>
-    </div>
-    <div class="platform">
-        <h2><a href="https://www.ted.com" target="_self">تيد (TED)</a></h2>
-        <p>منصة عالمية تقدم محاضرات ملهمة في مختلف المجالات من متحدثين خبراء حول العالم.</p>
-    </div>
-    <div class="platform">
-        <h2><a href="https://www.edraak.org" target="_self">إدراك (Edraak)</a></h2>
-        <p>منصة تعليمية عربية تقدم مساقات أكاديمية ومهنية مجانية عبر الإنترنت.</p>
-    </div>
-    <div class="platform">
-        <h2><a href="https://www.rwaq.org" target="_self">رواق (Rwaq)</a></h2>
-        <p>منصة تعليم إلكتروني عربية تقدم دورات في مجالات متنوعة باللغة العربية.</p>
-    </div>
-    <div class="platform">
-        <h2><a href="https://www.maaref.org" target="_self">معارف (Maaref)</a></h2>
-        <p>منصة تعليمية متخصصة في تقديم المحتوى التعليمي والثقافي.</p>
-    </div>
-    <div class="platform">
-        <h2><a href="https://samalmukhtar.github.io/MAT/" target="_self">قائمة المهام خلفية ماتريكس خاصة بك (MAT)</a></h2>
-        <p>منصة تعليمية متخصصة في حفظ و تقديم المحتوى التعليمي المتنوع للطلاب والمعلمين، مع التركيز على المواد الدراسية والموارد التعليمية.</p>
-    </div>
-</div>
-    <section>
-        <h2>تحليل العلوم الروحانية</h2>
-        <p>يتم تحليل العلوم الروحانية من خلال النصوص المقدسة والتعاليم الروحية. يمكن الاطلاع على الروابط التالية:</p>
-        <ul>
-            <li><a href="https://www.islamicbook.ws/amma/tfsir-alahlam-abn-sirin.html">تفسير الأحلام</a> - دراسة الأحلام وتأويلها.</li>
-            <li><a href="https://www.quran.com/">القرآن الكريم</a> - المصدر الرئيسي للعلوم الروحانية.</li>
-            <li><a href="https://hadithprophet.com/">الحديث النبوي</a> - تعاليم النبي محمد (صلى الله عليه و سلم و آله) في الروحانية.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>تحليل العلوم الطبيعية</h2>
-        <p>تتعلق العلوم الطبيعية بدراسة الظواهر الطبيعية وقوانينها. يمكن الاطلاع على الروابط التالية:</p>
-        <ul>
-            <li><a href="https://www.nature.com/">مجلة Nature</a> - أبحاث ودراسات في العلوم الطبيعية.</li>
-            <li><a href="https://www.sciencedirect.com/">ScienceDirect</a> - مقالات علمية في مختلف فروع العلوم.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>تحليل العلوم الاجتماعية</h2>
-        <p>تتناول العلوم الاجتماعية دراسة سلوك الأفراد والمجتمعات. يمكن الاطلاع على الروابط التالية:</p>
-        <ul>
-            <li><a href="https://www.jstor.org/">JSTOR</a> - مقالات أكاديمية في العلوم الاجتماعية.</li>
-            <li><a href="https://www.sociologicalreview.com/">Sociological Review</a> - أبحاث في علم الاجتماع.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>تحليل العلوم الإنسانية</h2>
-        <p>تتناول العلوم الإنسانية دراسة الثقافة والفنون. يمكن الاطلاع على الروابط التالية:</p>
-        <ul>
-            <li><a href="https://www.humanities.org/">Humanities</a> - مقالات في العلوم الإنسانية.</li>
-            <li><a href="https://www.jstor.org/">JSTOR</a> - مقالات أكاديمية في العلوم الإنسانية.</li>
-        </ul>
-    </section>
- 
-    <script>
-        document.getElementById('textAnalysisForm').onsubmit = function(event) {
-            event.preventDefault(); // منع الإرسال الافتراضي للنموذج
-            var inputText = document.getElementById('inputText').value;
-            var resultDiv = document.getElementById('analysisResult');
-            // منطق التحليل
-            resultDiv.innerHTML = '<h3>نتيجة التحليل:</h3><p>' + analyzeText(inputText) + '</p>';
-        };
-
-        function analyzeText(text) {
-            // منطق تحليل النصوص باستخدام الروح القدس
-            return 'تم تحليل النص: ' + text;
-        }
-    </script>
-    <section>
-        <h2>نموذج التعليق</h2>
-        <form id="commentForm">
-            <div class="form-group">
-                <label for="name">اسمك:</label>
-                <input type="text" id="name" name="name" class="form-control" required>
+        <section class="features">
+            <!-- المنصات التعليمية -->
+            <div class="feature-card">
+                <h2>🏛️ المنصات التعليمية</h2>
+                <div class="platform-item">
+                    <h3><a href="https://www.khanacademy.org">خان أكاديمي</a></h3>
+                    <p>منصة تعليمية مجانية متكاملة</p>
+                </div>
+                <!-- إضافة باقي المنصات بنفس النمط -->
             </div>
-            <div class="form-group">
-                <label for="comment">تعليقك:</label>
-                <textarea id="comment" name="comment" class="form-control" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">إرسال</button>
-        </form>
-    </section>
-    <section>
-        <h2>التعليقات</h2>
-        <div id="comments"></div>
-    </section>
-    <section>
-        <h2>دورات في الذكاء الاصطناعي Google و Microsoft</h2>
-        <ul>
-            <li><a href="https://www.coursera.org/">دورات Google AI</a></li>
-            <li><a href="https://learn.microsoft.com/ar-sa/training/">دورات Microsoft AI</a></li>
-            <li><a href="https://www.coursera.org/specializations/machine-learning">دورات Google Machine Learning</a></li>
-            <li><a href="https://visualstudio.microsoft.com/">دورات Microsoft AI Engineer+GitHub Copilot Free in Visual Studio</a></li>
-        </ul>
-    </section>
-    <section>
-        <h2>المدرسين والإداريين التنفيذيين في الذكاء الاصطناعي</h2>
-        <p>نقدم مجموعة من المدرسين والإداريين التنفيذيين المتخصصين في الذكاء الاصطناعي المفتوح المصدر.</p>
-    </section>
-    <section>
-        <h2>أدوات التواصل بالفيديو والصوت</h2>
-        <p>واتساب القناة بالأسفل ويمكنك التواصل معنا عبر أدوات كثيرة مثل الفيديو والصوت المتاحة.</p>
-        <ul>
-            <li><a href="https://github.com/samalmukhtar?tab=repositories">github.com</a></li>
-            <li><a href="https://zoom.us/">Zoom</a></li>
-            <li><a href="https://meet.google.com/">Google Meet</a></li>
-            <li><a href="https://www.skype.com/">Skype</a></li>
-            <a href="https://chat.whatsapp.com/KnOYqkBsfGs0dr4WjOVOjT" target="_blank" style="display: inline-flex; align-items: center; background-color: #25D366; color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px; margin-right: 10px;">
-                 انضم إلى المجموعة
-            </a>
+            <section class="features">
+                <!-- المنصات التعليمية -->
+                <div class="feature-card">
+                    <h2>🏛️ المنصات التعليمية</h2>
+                    <div class="platform-item">
+                        <h3><a href="https://www.khanacademy.org">خان أكاديمي (Khan Academy)</a></h3>
+                        <p>منصة تعليمية مجانية تقدم دروساً في الرياضيات والعلوم والبرمجة</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://www.canva.com">كانفا (Canva)</a></h3>
+                        <p>منصة تصميم إبداعية لإنشاء تصاميم احترافية</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://www.ted.com">تيد (TED)</a></h3>
+                        <p>محاضرات ملهمة من خبراء عالميين</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://www.edraak.org">إدراك (Edraak)</a></h3>
+                        <p>مساقات أكاديمية عربية مجانية</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://www.rwaq.org">رواق (Rwaq)</a></h3>
+                        <p>دورات تعليمية باللغة العربية</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://www.maaref.org">معارف (Maaref)</a></h3>
+                        <p>محتوى تعليمي وثقافي متخصص</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://samalmukhtar.github.io/MAT/">ماتريكس المهام (MAT)</a></h3>
+                        <p>منصة لإدارة المهام الدراسية والموارد التعليمية</p>
+                    </div>
+                </div>
             
-        </ul>
-        <div class="links">
-            <h2>النادي العربي للشطرنج</h2>
-            <p>انضم إلينا واستمتع بلعب الشطرنج مع محترفين من جميع أنحاء العالم!</p>
-            <a href="https://www.chess.com/club/lndy-l-rby-llshtrnj-the-great-chess-club/join" 
-               style="display: inline-block; padding: 10px 20px; background-color: #2980b9; color: #fff; text-decoration: none; border-radius: 5px;">
-               انقر هنا للاشتراك
+                <!-- العلوم الروحانية -->
+                <div class="feature-card">
+                    <h2>🔮 العلوم الروحانية</h2>
+                    <div class="platform-item">
+                        <h3><a href="https://www.islamicbook.ws/amma/tfsir-alahlam-abn-sirin.html">تفسير الأحلام</a></h3>
+                        <p>دراسة وتأويل الأحلام وفق المنظور الإسلامي</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://www.quran.com/">القرآن الكريم</a></h3>
+                        <p>المصدر الأساسي للعلوم الروحانية</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://hadithprophet.com/">الحديث النبوي</a></h3>
+                        <p>تعاليم النبي محمد ﷺ في الروحانية</p>
+                    </div>
+                </div>
+            
+                <!-- العلوم الطبيعية -->
+                <div class="feature-card">
+                    <h2>🌿 العلوم الطبيعية</h2>
+                    <div class="platform-item">
+                        <h3><a href="https://www.nature.com/">مجلة Nature</a></h3>
+                        <p>أبحاث ودراسات علمية رائدة</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://www.sciencedirect.com/">ScienceDirect</a></h3>
+                        <p>مصدر للمقالات العلمية المتخصصة</p>
+                    </div>
+                </div>
+            
+                <!-- العلوم الاجتماعية -->
+                <div class="feature-card">
+                    <h2>👥 العلوم الاجتماعية</h2>
+                    <div class="platform-item">
+                        <h3><a href="https://www.jstor.org/">JSTOR</a></h3>
+                        <p>مكتبة أكاديمية للعلوم الإنسانية</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://www.sociologicalreview.com/">Sociological Review</a></h3>
+                        <p>أبحاث في علم الاجتماع</p>
+                    </div>
+                </div>
+            
+                <!-- العلوم الإنسانية -->
+                <div class="feature-card">
+                    <h2>🎨 العلوم الإنسانية</h2>
+                    <div class="platform-item">
+                        <h3><a href="https://www.humanities.org/">Humanities</a></h3>
+                        <p>مقالات في الثقافة والفنون</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://www.jstor.org/">JSTOR</a></h3>
+                        <p>موارد أكاديمية للدراسات الإنسانية</p>
+                    </div>
+                </div>
+            
+                <!-- التواصل الاجتماعي -->
+                <div class="feature-card">
+                    <h2>📱 التواصل الاجتماعي</h2>
+                    <div class="platform-item">
+                        <h3><a href="https://chat.whatsapp.com/KnOYqkBsfGs0dr4WjOVOjT">مجموعة الواتساب</a></h3>
+                        <p>انضم لمجتمعنا التعليمي عبر واتساب</p>
+                    </div>
+                    <div class="platform-item">
+                        <h3><a href="https://t.me/example">قناة التليجرام</a></h3>
+                        <p>تواصل معنا عبر منصة التليجرام</p>
+                    </div>
+                </div>
+            </section>
+            <!-- العلوم الروحانية -->
+            <div class="feature-card">
+                <h2>🕋 العلوم الروحانية</h2>
+                <div class="platform-item">
+                    <h3><a href="https://quran.com">القرآن الكريم</a></h3>
+                    <p>المصدر الأساسي للعلوم الروحانية</p>
+                </div>
+                <!-- إضافة باقي المحتوى -->
+            </div>
+
+            <!-- قسم الفيديوهات -->
+            <div class="feature-card">
+                <h2>🎥 الفيديوهات التعليمية</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/DDrQZH8Mwxs" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الواتساب -->
+        <section class="feature-card">
+            <h2>📲 انضم إلى مجتمعنا</h2>
+            <a href="https://chat.whatsapp.com/KnOYqkBsfGs0dr4WjOVOjT" class="cta-button">
+                انضم عبر واتساب
             </a>
-        </div>
-        
-    </section>
-    <section>
-        <h2>آخر الفيديوهات</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/DDrQZH8Mwxs?si=XNiaZXyz4HnuCbfe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
-    <section id="videos-section" style="padding: 20px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 10px; margin: 20px auto; max-width: 800px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; text-align: center;">
-        <h2 style="color: #333; margin-bottom: 15px;">فيديوهات تعليمية</h2>
-        <p style="color: #555; font-size: 16px; margin-bottom: 20px;">
-            اكتشف المزيد عن Google Cloud وكيفية استخدام برامج المدرسة الكبرى للحكمة الربانية من خلال هذه الفيديوهات التعليمية.
-        </p>
-        
-        <!-- الفيديو الأول -->
-        <div style="margin-bottom: 30px;">
-            <h3 style="color: #333; margin-bottom: 10px;">فيديو: التعرف على Google Cloud</h3>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
-                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                    src="https://www.youtube.com/embed/u8FpgpcBBKc?si=Pe0C390xAbXgtrHA" 
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
-            </div>
-            <p style="color: #555; font-size: 16px; margin-top: 10px;">
-                في هذا الفيديو، ستتعرف على أساسيات Google Cloud وكيف يمكنك الاستفادة من خدماته المجانية لإنجاز مشاريعك بكفاءة.
-            </p>
-        </div>
-        
-        <!-- الفيديو الثاني -->
-        <div style="margin-bottom: 30px;">
-            <h3 style="color: #333; margin-bottom: 10px;">فيديو: كيفية استخدام برامج المدرسة الكبرى</h3>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
-                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                    src="https://www.youtube.com/embed/8fe0LrGBToY?si=REtp2q3s5HEQYp09" 
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
-            </div>
-            <p style="color: #555; font-size: 16px; margin-top: 10px;">
-                هذا الفيديو يقدم دليلاً عملياً حول كيفية استخدام برامج المدرسة الكبرى للحكمة الربانية لتنفيذ مشاريعك بسهولة وكفاءة.
-            </p>
-        </div>
-    </section>
-    
-</div>
-<footer>
-    <p>جميع الحقوق محفوظة للمعلم الأكبر</p>
-</footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    document.getElementById('commentForm').onsubmit = function(event) {
-        event.preventDefault(); // منع الإرسال الافتراضي للنموذج
-        var name = document.getElementById('name').value;
-        var comment = document.getElementById('comment').value;
-        var commentsDiv = document.getElementById('comments');
-        var newComment = document.createElement('div');
-        newComment.classList.add('comment');
-        newComment.innerHTML = '<strong>' + name + ':</strong> <p>' + comment + '</p>';
-        commentsDiv.appendChild(newComment);
-        document.getElementById('commentForm').reset(); // إعادة تعيين النموذج
-    };
-</script>
+        </section>
+
+        <!-- قسم التعليقات -->
+        <section class="comment-section feature-card">
+            <h2>💬 شاركنا رأيك</h2>
+            <form id="commentForm" class="comment-form">
+                <input type="text" id="name" placeholder="اسمك الكريم" required>
+                <textarea id="comment" rows="5" placeholder="اكتب تعليقك هنا..." required></textarea>
+                <button type="submit" class="cta-button">إرسال التعليق</button>
+            </form>
+            <div id="comments" style="margin-top: 20px;"></div>
+        </section>
+
+        <footer>
+            <p>✨ جميع الحقوق محفوظة للمعلم الأكبر</p>
+            <p>⚡ صنع بـ كلود و ديب سيك<strong> </strong> |  المدرسة © 2024</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('commentForm').onsubmit = function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+            
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'platform-item';
+            commentDiv.innerHTML = `
+                <h3 style="color: #ffd700;">${name}</h3>
+                <p>${comment}</p>
+                <small style="color: #00B4D8;">${new Date().toLocaleString()}</small>
+            `;
+            
+            document.getElementById('comments').prepend(commentDiv);
+            document.getElementById('commentForm').reset();
+        };
+    </script>
+</body>
+</html>
 </body>
 </html>
